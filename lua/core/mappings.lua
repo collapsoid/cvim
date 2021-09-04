@@ -16,10 +16,10 @@ set_map_key('n', '<C-Left>', ':vertical resize +2<CR>', opts)
 set_map_key('n', '<C-Right>', ':vertical resize -2<CR>', opts)
 
 -- Move blocks of code
---set_map_key('n', '<C-j>', ':m .+1<CR>==', opts)
---set_map_key('n', '<C-k>', ':m .-2<CR>==', opts)
---set_map_key('x', '<C-j>', ":m '>+1<CR>gv-gv", opts)
---set_map_key('x', '<C-k>', ":m '<-2<CR>gv-gv", opts)
+set_map_key('n', '<C-j>', ':m .+1<CR>==', opts)
+set_map_key('n', '<C-k>', ':m .-2<CR>==', opts)
+set_map_key('x', '<C-j>', ":m '>+1<CR>gv-gv", opts)
+set_map_key('x', '<C-k>', ":m '<-2<CR>gv-gv", opts)
 
---set_map_key('v', '<','<gv', opts)
---set_map_key('v', '>','>gv', opts)
+set_map_key('v', '<','<gv', opts)
+set_map_key('v', '>','>gv', opts)
