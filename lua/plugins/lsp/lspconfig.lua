@@ -24,10 +24,12 @@ end
 
 local func = utils.func
 
-func.sign_define("LspDiagnosticsSign" .. "Error", { text = "", numhl = "LspDiagnosticsDefaul" .. "Error" })
-func.sign_define("LspDiagnosticsSign" .. "Information", { text = "", numhl = "LspDiagnosticsDefaul" .. "Information" })
-func.sign_define("LspDiagnosticsSign" .. "Hint", { text = "", numhl = "LspDiagnosticsDefaul" .. "Hint" })
-func.sign_define("LspDiagnosticsSign" .. "Warning", { text = "", numhl = "LspDiagnosticsDefaul" .. "Warning" })
+vim.lsp.diagnostic.set_signs()
+
+func.sign_define("LspDiagnosticsSignError", { text = ">>", texthl="LspDiagnosticsDefaultError", numhl = "LspDiagnosticsDefaultError" })
+func.sign_define("LspDiagnosticsSignInformation", { text = "", numhl = "LspDiagnosticsDefaultInformation" })
+func.sign_define("LspDiagnosticsSignHint", { text = "", numhl = "LspDiagnosticsDefaultHint" })
+func.sign_define("LspDiagnosticsSignWarning", { text = ">>", texthl="LspDiagnosticsDefaultWarning", numhl = "LspDiagnosticsDefaultWarning" })
 
 mappings.setup()
 handlers.setup()
