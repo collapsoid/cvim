@@ -6,11 +6,3 @@ end
 
 
 colorizer.setup()
--- colorizer.setup {
---     'css',
---     'scss',
---     'typescript',
---     'typescriptreact',
---     'javascript',
---     'javascriptreact'
--- }
