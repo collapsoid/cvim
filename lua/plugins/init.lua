@@ -107,6 +107,13 @@ return require('packer').startup(function(use)
     }
 
     use {
+        'norcalli/nvim-colorizer.lua',
+        config = function()
+            require('plugins/colorizer')
+        end
+    }
+
+    use {
         "akinsho/toggleterm.nvim",
         config = function()
             require('plugins/toggleterm')
