@@ -16,24 +16,5 @@ autopairs.setup {
 autopairs_completion.setup {
    map_complete = true, -- insert () func completion
    map_cr = true,
+   auto_select = true
 }
-
-
---local ok, autopairs = pcall(require, "nvim-autopairs")
---
---if not ok then
---    return
---end
---
---
---autopairs.setup {
---    map_cr = true,
---    map_complete = true,
---    auto_select = true,
---    check_ts = true,
---    ts_config = {
---        lua = { 'string' },
---        javascript = { 'template_string' },
---        java = false
---    }
---}
