@@ -99,6 +99,11 @@ return require('packer').startup(function(use)
     }
 
     use {
+        'nvim-telescope/telescope-fzf-native.nvim',
+        run = 'make'
+    }
+
+    use {
         'lewis6991/gitsigns.nvim',
         requires = {
             'nvim-lua/plenary.nvim'
