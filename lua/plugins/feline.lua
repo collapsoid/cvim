@@ -231,38 +231,34 @@ local properties = {
 }
 
 local components = {
-    left = {
-        active = {
-            comps.vi_mode.left,
-            comps.file.info,
-            comps.lsp.name,
-            comps.diagnos.err,
-            comps.diagnos.warn,
-            comps.diagnos.hint,
-            comps.diagnos.info
-        },
-        inactive = {
-            comps.vi_mode.left,
-            comps.file.info
-        }
-    },
-    mid = {
-        active = {},
-        inactive = {}
-    },
-    right = {
-        active = {
-            comps.git.add,
-            comps.git.change,
-            comps.git.remove,
-            comps.file.os,
-            comps.git.branch,
-            comps.line_percentage,
-            comps.scroll_bar,
-            comps.vi_mode.right
-        },
-        inactive = {}
-    }
+    active = {},
+    inactive = {}
+}
+
+components.active[1] = {
+    comps.vi_mode.left,
+    comps.file.info,
+    comps.lsp.name,
+    comps.diagnos.err,
+    comps.diagnos.warn,
+    comps.diagnos.hint,
+    comps.diagnos.info
+}
+
+components.inactive[1] = {
+    comps.vi_mode.left,
+    comps.file.info
+}
+
+components.active[3] = {
+    comps.git.add,
+    comps.git.change,
+    comps.git.remove,
+    comps.file.os,
+    comps.git.branch,
+    comps.line_percentage,
+    comps.scroll_bar,
+    comps.vi_mode.right
 }
 
 -- LuaFormatter on
