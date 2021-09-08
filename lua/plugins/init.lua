@@ -2,6 +2,7 @@ return require('packer').startup(function(use)
     use 'wbthomason/packer.nvim'
     use 'cocopon/iceberg.vim'
     use 'nvim-lua/plenary.nvim'
+    use 'famiu/bufdelete.nvim'
 
     use {
         'famiu/feline.nvim',
@@ -24,9 +25,10 @@ return require('packer').startup(function(use)
     }
 
     use {
-        'romgrk/barbar.nvim',
+        'akinsho/bufferline.nvim',
         requires = {
-            'kyazdani42/nvim-web-devicons'
+            'kyazdani42/nvim-web-devicons',
+            'famiu/bufdelete.nvim'
         },
         config = function()
             require('plugins/bufferline')

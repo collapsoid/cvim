@@ -107,19 +107,4 @@ g.nvim_tree_bindings = {
 
 local opts = { noremap = true, silent = true }
 
-local view = require'nvim-tree.view'
-TreeToggle = function ()
-    if not view.win_open() then
-        if package.loaded['bufferline.state'] then
-            require('bufferline.state').set_offset(70, 'FileTree')
-        end
-        require'nvim-tree'.find_file(true)
-    else
-        if package.loaded['bufferline.state'] then
-            require'bufferline.state'.set_offset(0)
-        end
-        require'nvim-tree'.close()
-    end
-end
-
-set_map_key('n', '<C-n>', ':lua TreeToggle()<CR>', opts)
+set_map_key('n', '<C-n>', ':NvimTreeToggle<CR>', opts)
