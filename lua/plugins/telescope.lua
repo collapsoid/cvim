@@ -71,3 +71,5 @@ local opts = { noremap = true, silent = true }
 set_map_key('n', '<leader>ff', ':Telescope find_files<CR>', opts)
 set_map_key('n', '<leader>fg', ':Telescope live_grep<CR>', opts)
 set_map_key('n', '<leader>fb', ':Telescope buffers<CR>', opts)
+set_map_key('n', '<leader>gb', ':Telescope git_branches<CR>', opts)
+set_map_key('n', '<leader>gs', ':Telescope git_status<CR>', opts)
