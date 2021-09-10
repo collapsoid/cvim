@@ -11,17 +11,22 @@ treesitter.setup {
         enable = true,
         additional_vim_regex_highlighting = true
     },
+    autopairs = {
+        enable = true
+    },
+    autotag = {
+        enable = true
+    },
     rainbow = {
-        enable = true,
+        enable = false,
         extended_mode = true,
         max_file_lines = 1000
     },
     context_commentstring = {
-        enable = false,
+        enable = true,
         config = { css = "// %s" },
     },
-    indent = { enable = false, disable = { "yaml" } },
-    autotag = { enable = false },
+    indent = { enable = true, disable = { "yaml" } },
     textobjects = {
         swap = {
             enable = false
