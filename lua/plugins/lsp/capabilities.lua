@@ -14,4 +14,12 @@ M.capabilities.textDocument.completion.completionItem.resolveSupport = {
    },
 }
 
+
+local ok, cmp_lsp = pcall(require, "cmp_nvim_lsp")
+
+if ok then
+    M.capabilities = cmp_lsp.update_capabilities(M.capabilities)
+end
+
+
 return M
