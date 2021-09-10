@@ -1,7 +1,6 @@
 local ok, autopairs = pcall(require, "nvim-autopairs")
-local ok2, autopairs_completion = pcall(require, "nvim-autopairs.completion.cmp")
 
-if not (ok or ok2) then
+if not ok then
    return
 end
 
@@ -9,12 +8,24 @@ autopairs.setup {
     check_ts = true,
     ts_config = {
         lua = { 'string' },
-        javascript = { 'template_string' },
-        java = false
+        javascript = { 'template_string' }
+    },
+    fast_wrap = {
+        map = '<M-e>',
+        chars = { '{', '[', '(', '"', "'" },
+        pattern = string.gsub([[ [%'%"%)%>%]%)%}%,] ]], '%s+', ''),
+        end_key = '$',
+        keys = 'qwertyuiopzxcvbnmasdfghjkl',
+        check_comma = true,
+        hightlight = 'Search'
     }
 }
-autopairs_completion.setup {
-   map_complete = true,
+
+
+local cmp_completion = require('nvim-autopairs.completion.cmp')
+
+cmp_completion.setup {
+   -- map_complete = true, --disable autopairs on import
    map_cr = true,
    auto_select = true
 }
