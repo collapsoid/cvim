@@ -9,7 +9,7 @@ local compare = require('cmp.config.compare')
 
 cmp.setup {
     confirmation = {
-        default_behaviour = cmp.ConfirmBehavior.Replace
+        default_behaviour = cmp.ConfirmBehavior.Insert
     },
     completion = {
         completeopt = 'menu,menuone,noinsert'
@@ -19,6 +19,9 @@ cmp.setup {
         expand = function(args)
             require("luasnip").lsp_expand(args.body)
         end
+    },
+    documentation = {
+        border = { "╭", "─", "╮", "│", "╯", "─", "╰", "│" }
     },
     formatting = {
         format = function(entry, vim_item)
@@ -40,7 +43,11 @@ cmp.setup {
     mapping = {
         ["<Tab>"] = cmp.mapping.select_next_item(),
         ["<S-Tab>"] = cmp.mapping.select_prev_item(),
-        ["<CR>"] = cmp.mapping.confirm(),
+        ['<CR>'] = cmp.mapping.confirm({
+            -- behavior = cmp.ConfirmBehavior.Insert,
+            select = false
+        }),
+        ['<C-Space>'] = cmp.mapping.complete()
     },
     sorting = {
         priority_weight = 2,
