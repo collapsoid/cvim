@@ -3,6 +3,7 @@ return require('packer').startup(function(use)
     use 'cocopon/iceberg.vim'
     use 'nvim-lua/plenary.nvim'
     use 'famiu/bufdelete.nvim'
+    use 'windwp/nvim-ts-autotag'
 
     use {
         'famiu/feline.nvim',
