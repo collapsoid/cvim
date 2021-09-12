@@ -21,7 +21,7 @@ cmp.setup {
         end
     },
     documentation = {
-        border = { "╭", "─", "╮", "│", "╯", "─", "╰", "│" }
+        border = { '╭', '─', '╮', '│', '╯', '─', '╰', '│' }
     },
     formatting = {
         format = function(entry, vim_item)
