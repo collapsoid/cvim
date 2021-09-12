@@ -264,9 +264,9 @@ components.active[3] = {
 -- LuaFormatter on
 
 feline.setup {
-    default_bg = colors.bg,
-    default_fg = colors.fg,
+    bg = colors.bg,
+    fg = colors.fg,
     components = components,
-    properties = properties,
+    force_inactive = properties.force_inactive,
     vi_mode_colors = vi_mode_colors
 }
