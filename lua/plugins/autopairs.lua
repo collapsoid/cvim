@@ -4,6 +4,9 @@ if not ok then
    return
 end
 
+local utils = require('utils')
+local set_map_key = utils.set_map_key
+
 autopairs.setup {
     check_ts = true,
     ts_config = {
@@ -25,7 +28,12 @@ autopairs.setup {
 local cmp_completion = require('nvim-autopairs.completion.cmp')
 
 cmp_completion.setup {
-   -- map_complete = true, --disable autopairs on import
-   map_cr = true,
-   auto_select = true
+   map_complete = false, -- disable autopairs on import
+   map_cr = false,
+   auto_select = false
 }
+
+
+local opts = { expr = true, noremap = true }
+
+set_map_key('i', '<CR>', 'v:lua.MPairs.autopairs_cr()', opts)

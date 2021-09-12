@@ -12,7 +12,7 @@ cmp.setup {
         default_behaviour = cmp.ConfirmBehavior.Insert
     },
     completion = {
-        completeopt = 'menu,menuone,noinsert'
+        -- completeopt = 'menu,menuone,noinsert'
     },
     preselect = "enable",
     snippet = {
@@ -44,8 +44,8 @@ cmp.setup {
         ["<Tab>"] = cmp.mapping.select_next_item(),
         ["<S-Tab>"] = cmp.mapping.select_prev_item(),
         ['<CR>'] = cmp.mapping.confirm({
-            -- behavior = cmp.ConfirmBehavior.Insert,
-            select = false
+            behavior = cmp.ConfirmBehavior.Insert,
+            select = true
         }),
         ['<C-Space>'] = cmp.mapping.complete()
     },
