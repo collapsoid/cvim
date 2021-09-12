@@ -1,9 +1,15 @@
 return require('packer').startup(function(use)
     use 'wbthomason/packer.nvim'
-    use 'cocopon/iceberg.vim'
     use 'nvim-lua/plenary.nvim'
     use 'famiu/bufdelete.nvim'
     use 'windwp/nvim-ts-autotag'
+
+    use {
+        'cocopon/iceberg.vim',
+        config = function()
+            vim.cmd [[colorscheme iceberg]]
+        end
+    }
 
     use {
         'famiu/feline.nvim',

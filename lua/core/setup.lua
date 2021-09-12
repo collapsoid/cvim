@@ -8,7 +8,6 @@ cmd [[
     set nocompatible
     set t_Co=256
     set completeopt=menuone,noselect
-    colorscheme iceberg
 ]]
 set.number = true
 set.signcolumn = 'yes'
