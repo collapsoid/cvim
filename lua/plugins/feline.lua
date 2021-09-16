@@ -250,7 +250,7 @@ components.inactive[1] = {
     comps.file.info
 }
 
-components.active[3] = {
+components.active[2] = {
     comps.git.add,
     comps.git.change,
     comps.git.remove,
