@@ -5,10 +5,7 @@ return require('packer').startup(function(use)
     use 'windwp/nvim-ts-autotag'
 
     use {
-        'cocopon/iceberg.vim',
-        config = function()
-            vim.cmd [[colorscheme iceberg]]
-        end
+        'cocopon/iceberg.vim'
     }
 
     use {
