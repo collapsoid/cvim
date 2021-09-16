@@ -1,17 +1,3 @@
---local cmd = vim.cmd
---local o_s = vim.o
---local map_key = vim.api.nvim_set_keymap
---
---local function autocmd(group, cmds, clear)
---  clear = clear == nil and false or clear
---  if type(cmds) == 'string' then cmds = {cmds} end
---  cmd('augroup ' .. group)
---  if clear then cmd [[au!]] end
---  for _, c in ipairs(cmds) do cmd('autocmd ' .. c) end
---  cmd [[augroup END]]
---end
-
-
 local M = {}
 
 M.g = vim.g
@@ -29,14 +15,14 @@ M.set_global = vim.go
 M.set_win_local = vim.wo
 M.set_buf_local = vim.bo
 
+M.set_option = vim.api.nvim_set_option
 M.get_option = vim.api.nvim_get_option
-M.set_option = vim.api.nvim_get_option
 
-M.get_win_option = vim.api.nvim_win_get_option
 M.set_win_option = vim.api.nvim_win_set_option
+M.get_win_option = vim.api.nvim_win_get_option
 
-M.get_buf_option = vim.api.nvim_buf_get_option
 M.set_buf_option = vim.api.nvim_buf_set_option
+M.get_buf_option = vim.api.nvim_buf_get_option
 
 M.set_map_key = vim.api.nvim_set_keymap
 M.get_map_key = vim.api.nvim_get_keymap
