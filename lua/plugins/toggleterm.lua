@@ -19,6 +19,7 @@ toggleterm.setup {
 
 local opts = { noremap = true, silent = true }
 
+set_map_key('t', '<esc>', [[<C-\><C-n>]], opts)
 set_map_key('t', '<A-h>', [[<C-\><C-n><C-W>h]], opts)
 set_map_key('t', '<A-l>', [[<C-\><C-n><C-W>l]], opts)
 set_map_key('t', '<A-j>', [[<C-\><C-n><C-W>j]], opts)
