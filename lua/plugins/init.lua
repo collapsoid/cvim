@@ -9,12 +9,13 @@ return require('packer').startup(function(use)
     }
 
     use {
-        'famiu/feline.nvim',
+        'hoob3rt/lualine.nvim',
         requires = {
-          'kyazdani42/nvim-web-devicons'
+            'kyazdani42/nvim-web-devicons',
+            opt = true
         },
         config = function()
-          require('plugins.feline')
+            require('plugins/lualine')
         end
     }
 
