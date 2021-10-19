@@ -18,7 +18,6 @@ nvim_tree.setup {
     open_on_tab = true,
     hijack_cursor = true,
     update_cwd = false,
-    lsp_diagnostics = true,
     update_focused_file = {
         enable = true,
         update_cwd  = false,
@@ -35,6 +34,15 @@ nvim_tree.setup {
         mappings = {
             custom_only = false,
             list = {}
+        }
+    },
+    diagnostics = {
+        enable = true,
+        icons = {
+            hint = "",
+            info = "",
+            warning = "",
+            error = "",
         }
     }
 }
@@ -65,16 +73,10 @@ g.nvim_tree_icons = {
       arrow_open = "",
       arrow_closed = "",
       default = "",
-      empty = "", -- 
+      empty = "",
       empty_open = "",
       open = "",
       symlink = ""
-   },
-   lsp = {
-       hint = "",
-       info = "",
-       warning = "",
-       error = ""
    }
 }
 
