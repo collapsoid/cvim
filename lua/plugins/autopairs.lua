@@ -25,13 +25,17 @@ autopairs.setup {
 }
 
 
-local cmp_completion = require('nvim-autopairs.completion.cmp')
+local cmp_autopairs = require('nvim-autopairs.completion.cmp')
+local cmp = require('cmp')
 
-cmp_completion.setup {
-   map_complete = false, -- disable autopairs on import
-   map_cr = false,
-   auto_select = false
-}
+cmp.event:on(
+    'confirm_done',
+    cmp_autopairs.on_confirm_done({
+        map_char = {
+            tex = ''
+        }
+    })
+)
 
 
 local opts = { expr = true, noremap = true }
