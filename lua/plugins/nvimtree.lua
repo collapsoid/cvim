@@ -3,7 +3,6 @@ local set_map_key = utils.set_map_key
 local g = utils.g
 
 g.nvim_tree_git_hl = 1
-g.nvim_tree_gitignore = 1
 
 g.nvim_tree_show_icons = {
    folders = 1,
@@ -77,6 +76,10 @@ nvim_tree.setup {
             warning = "",
             error = "",
         }
+    },
+    git = {
+        enable = true,
+        ignore = true
     }
 }
 
