@@ -3,6 +3,14 @@ local set_map_key = utils.set_map_key
 
 local opts = { noremap = true, silent = true }
 
+-- Copy to clipboard
+set_map_key('v', '<leader>y', '"+y', opts)
+set_map_key('n', '<leader>y', '"+yg_', opts)
+
+-- Paste from clipboard
+set_map_key('n', '<leader>p', '"+p', opts)
+set_map_key('v', '<leader>p', '"+p', opts)
+
 -- Move between windows
 set_map_key('n', '<A-h>', '<c-w>h', opts)
 set_map_key('n', '<A-j>', '<c-w>j', opts)
