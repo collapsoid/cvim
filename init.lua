@@ -5,7 +5,7 @@ require('core')
 require('plugins')
 
 
-cmd [[ colorscheme iceberg ]]
+cmd [[ colorscheme ghdark ]]
 
 -- Highlight yank
 cmd [[

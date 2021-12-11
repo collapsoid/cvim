@@ -5,7 +5,7 @@ return require('packer').startup(function(use)
     use 'windwp/nvim-ts-autotag'
 
     use {
-        'cocopon/iceberg.vim'
+        'wojciechkepka/vim-github-dark'
     }
 
     use {
