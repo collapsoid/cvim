@@ -13,7 +13,7 @@ function M.setup()
     set_map_key('n', 'gI', ':lua vim.lsp.buf.implementation()<CR>', opts)
     set_map_key('n', 'gs', ':lua vim.lsp.buf.signature_help()<CR>', opts)
     set_map_key('n', 'gp', ':lua require("lsp.peek").Peek("definition")<CR>', opts)
-    set_map_key('n', 'gl', ':lua vim.lsp.diagnostic.show_line_diagnostics({ show_header = false, border = "single" })<CR>', opts)
+    set_map_key('n', 'gl', ':lua vim.diagnostic.open_float({ show_header = false, border = "single" })<CR>', opts)
     set_map_key('n', '<space>rn', ':lua vim.lsp.buf.rename()<CR>', opts)
 end
 
