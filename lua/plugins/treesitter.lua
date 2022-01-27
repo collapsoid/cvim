@@ -18,7 +18,7 @@ treesitter.setup {
         enable = true
     },
     rainbow = {
-        enable = false,
+        enable = true,
         extended_mode = true,
         max_file_lines = 1000
     },
