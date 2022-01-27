@@ -6,17 +6,15 @@ end
 
 local utils = require('utils')
 
-local lspinstall = require('plugins/lsp/lspinstall')
-local mappings = require('plugins/lsp/mappings')
-local handlers = require('plugins/lsp/handlers')
+local lspinstall = require('plugins.lsp.lspinstall')
+local mappings = require('plugins.lsp.mappings')
 
 local func = utils.func
 
-func.sign_define("DiagnosticSignError", { text = ">>", texthl="DiagnosticSignError", numhl = "DiagnosticSignError" })
+func.sign_define("DiagnosticSignError", { text = ">>", texthl = "DiagnosticSignError", numhl = "DiagnosticSignError" })
 func.sign_define("DiagnosticSignInfo", { text = "", numhl = "DiagnosticSignInfo" })
 func.sign_define("DiagnosticSignHint", { text = "", numhl = "DiagnosticSignHint" })
-func.sign_define("DiagnosticSignWarn", { text = ">>", texthl="DiagnosticSignWarn", numhl = "DiagnosticSignWarn" })
+func.sign_define("DiagnosticSignWarn", { text = ">>", texthl = "DiagnosticSignWarn", numhl = "DiagnosticSignWarn" })
 
 lspinstall.setup()
 mappings.setup()
-handlers.setup()
