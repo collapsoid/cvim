@@ -20,7 +20,7 @@ require('bufferline').setup {
     diagnostics_update_in_insert = false,
     offsets = {
         {
-            filetype = "NvimTree",
+            filetype = "neo-tree",
             text = function()
                 return func.getcwd()
             end,

@@ -8,6 +8,6 @@ end
 lualine.setup {
     options = {
         theme = 'nightfly',
-        disabled_filetypes = {'NvimTree'}
+        disabled_filetypes = {'NvimTree', 'neo-tree'}
     }
 }

@@ -20,14 +20,27 @@ return require('packer').startup(function(use)
     }
 
     use {
-        'kyazdani42/nvim-tree.lua',
+        "nvim-neo-tree/neo-tree.nvim",
+        -- branch = "main",
         requires = {
-          'kyazdani42/nvim-web-devicons'
+            "nvim-lua/plenary.nvim",
+            "kyazdani42/nvim-web-devicons",
+            "MunifTanjim/nui.nvim"
         },
-        config = function()
-          require('plugins/nvimtree')
+        config = function ()
+            require('plugins.neotree')
         end
     }
+
+    -- use {
+    --     'kyazdani42/nvim-tree.lua',
+    --     requires = {
+    --       'kyazdani42/nvim-web-devicons'
+    --     },
+    --     config = function()
+    --       require('plugins/nvimtree')
+    --     end
+    -- }
 
     use {
         'akinsho/bufferline.nvim',
