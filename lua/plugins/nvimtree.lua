@@ -41,6 +41,7 @@ if not ok then
 end
 
 nvim_tree.setup {
+    auto_reload_on_write = true,
     follow = true,
     disable_netrw = true,
     hijack_netrw = true,
@@ -55,6 +56,10 @@ nvim_tree.setup {
         update_cwd  = false,
         ignore_list = {}
     },
+    update_to_buf_dir = {
+        enable = true,
+        auto_open = true
+    },
     system_open = {
         cmd  = nil,
         args = {}
@@ -62,11 +67,12 @@ nvim_tree.setup {
     view = {
         width = 70,
         side = 'left',
-        auto_resize = true,
+        auto_resize = false,
         mappings = {
             custom_only = false,
             list = {}
-        }
+        },
+        signcolumn = "yes"
     },
     diagnostics = {
         enable = true,
