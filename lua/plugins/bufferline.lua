@@ -1,7 +1,13 @@
+local ok, bufferline = pcall(require, 'bufferline')
+
+if not ok then
+    return
+end
+
 local utils = require('utils')
 local func = utils.func
 
-require('bufferline').setup {
+bufferline.setup {
   options = {
     close_command = "Bdelete! %d",
     right_mouse_command = "Bdelete! %d",

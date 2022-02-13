@@ -15,7 +15,7 @@ return require('packer').startup(function(use)
             opt = true
         },
         config = function()
-            require('plugins/lualine')
+            require('plugins.lualine')
         end
     }
 
@@ -27,50 +27,39 @@ return require('packer').startup(function(use)
             "kyazdani42/nvim-web-devicons",
             "MunifTanjim/nui.nvim"
         },
-        config = function ()
+        config = function()
             require('plugins.neotree')
         end
     }
 
-    -- use {
-    --     'kyazdani42/nvim-tree.lua',
-    --     requires = {
-    --       'kyazdani42/nvim-web-devicons'
-    --     },
-    --     config = function()
-    --       require('plugins/nvimtree')
-    --     end
-    -- }
-
     use {
-        'akinsho/bufferline.nvim',
+        'noib3/nvim-cokeline',
         requires = {
-            'kyazdani42/nvim-web-devicons',
-            'famiu/bufdelete.nvim'
+            'kyazdani42/nvim-web-devicons'
         },
         config = function()
-            require('plugins/bufferline')
+            require('plugins.cokeline')
         end
     }
 
     use {
         'neovim/nvim-lspconfig',
         config = function()
-            require('plugins/lsp/lspconfig')
+            require('plugins.lsp.lspconfig')
         end
     }
 
     use {
         'williamboman/nvim-lsp-installer',
         config = function()
-            require('plugins/lsp/lspinstall')
+            require('plugins.lsp.lspinstall')
         end
     }
 
     use {
         'L3MON4D3/LuaSnip',
         config = function()
-            require('plugins/luasnip').setup()
+            require('plugins.luasnip').setup()
         end
     }
 
@@ -87,21 +76,21 @@ return require('packer').startup(function(use)
             -- 'rafamadriz/friendly-snippets'
         },
         config = function()
-            require('plugins/cmp')
+            require('plugins.cmp')
         end
     }
 
     use {
         'preservim/nerdcommenter',
         config = function()
-            require('plugins/nerdcommenter')
+            require('plugins.nerdcommenter')
         end
     }
 
     use {
         'windwp/nvim-autopairs',
         config = function()
-            require('plugins/autopairs')
+            require('plugins.autopairs')
         end
     }
 
@@ -109,7 +98,7 @@ return require('packer').startup(function(use)
         'nvim-treesitter/nvim-treesitter',
         run = ':TSUpdate',
         config = function()
-            require('plugins/treesitter')
+            require('plugins.treesitter')
         end
     }
 
@@ -119,7 +108,7 @@ return require('packer').startup(function(use)
             'nvim-lua/plenary.nvim'
         },
         config = function()
-            require('plugins/telescope')
+            require('plugins.telescope')
         end
     }
 
@@ -134,21 +123,21 @@ return require('packer').startup(function(use)
             'nvim-lua/plenary.nvim'
         },
         config = function()
-            require('plugins/gitsigns')
+            require('plugins.gitsigns')
         end
     }
 
     use {
         'norcalli/nvim-colorizer.lua',
         config = function()
-            require('plugins/colorizer')
+            require('plugins.colorizer')
         end
     }
 
     use {
         "akinsho/toggleterm.nvim",
         config = function()
-            require('plugins/toggleterm')
+            require('plugins.toggleterm')
         end
     }
 
