@@ -39,7 +39,7 @@ neotree.setup({
             respect_gitignore = true,
         },
         follow_current_file = true,
-        use_libuv_file_watcher = false,
+        use_libuv_file_watcher = true,
         window = {
             position = "left",
             width = 70,
