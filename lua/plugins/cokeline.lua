@@ -6,7 +6,6 @@ end
 
 
 local utils = require('utils')
-local get_hex = require('cokeline/utils').get_hex
 
 cokeline.setup({
     buffers = {
@@ -15,24 +14,23 @@ cokeline.setup({
     },
     default_hl = {
         focused = {
-            fg = get_hex('Normal', 'fg'),
-            bg = get_hex('StatusLine', 'bg'),
+            fg = '#0f0f0f',
+            bg = '#ccc8ba',
         },
         unfocused = {
-            fg = get_hex('Comment', 'fg'),
-            bg = get_hex('StatusLine', 'bg'),
+            fg = '#202020',
+            bg = '#9d998d',
         }
     },
     rendering = {
         max_buffer_width = 80,
         left_sidebar = {
-            filetype = 'neo-tree',
+            filetype = 'NvimTree',
             components = {
                 {
-                    text = '  NeoTree',
+                    text = '  NvimTree',
                     hl = {
-                        fg = '#a2d2fb',
-                        bg = get_hex('NeoTreeNormal', 'bg'),
+                        bg = '#0f0f0f',
                         style = 'bold'
                     }
                 }
@@ -43,32 +41,25 @@ cokeline.setup({
         {
             text = function(buffer) return (buffer.index == 1) and '       ' or '  ' end,
             hl = {
-                bg = get_hex('StatusLineNC', 'bg')
+                bg = '#202020'
             }
         },
         {
-            text = '',
+            text = function(buffer) return ' ' .. buffer.index end,
             hl = {
-                fg = get_hex('StatusLine', 'bg'),
-                bg = get_hex('StatusLineNC', 'bg')
-            },
-        },
-        {
-            text = function(buffer) return ((buffer.index == 1) and '' or '') .. buffer.index end,
-            hl = {
-                fg = '#a2d2fb',
+                fg = '#893f3e',
             },
         },
         {
             text = '|',
             hl = {
-                fg = '#89929b',
+                fg = '#202020',
             },
         },
         {
             text = function(buffer) return buffer.devicon.icon .. ' ' end,
             hl = {
-                fg = function(buffer) return buffer.devicon.color end,
+                fg = '#0f0f0f',
             },
         },
         {
@@ -78,21 +69,18 @@ cokeline.setup({
             }
         },
         {
-            -- text = function(buffer) return (buffer.is_modified) and '●' or '' end,
             text = function(buffer) return (buffer.is_modified) and '*' or '' end,
             hl = {
-                fg = '#ffea41'
+                fg = '#ba604c',
+                style = 'bold'
             }
         },
         {
-            text = ' ',
             delete_buffer_on_left_click = true,
-        },
-        {
-            text = '',
+            text = '  ',
             hl = {
-                fg = get_hex('StatusLine', 'bg'),
-                bg = get_hex('StatusLineNC', 'bg')
+                fg = '#0f0f0f',
+                style = 'bold'
             },
         },
     },
