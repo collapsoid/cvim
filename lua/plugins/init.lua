@@ -19,16 +19,26 @@ return require('packer').startup(function(use)
         end
     }
 
+    -- use {
+    --     "nvim-neo-tree/neo-tree.nvim",
+    --     branch = "main",
+    --     requires = {
+    --         "nvim-lua/plenary.nvim",
+    --         "kyazdani42/nvim-web-devicons",
+    --         "MunifTanjim/nui.nvim"
+    --     },
+    --     config = function()
+    --         require('plugins.neotree')
+    --     end
+    -- }
+
     use {
-        "nvim-neo-tree/neo-tree.nvim",
-        -- branch = "main",
+        'kyazdani42/nvim-tree.lua',
         requires = {
-            "nvim-lua/plenary.nvim",
-            "kyazdani42/nvim-web-devicons",
-            "MunifTanjim/nui.nvim"
+            'kyazdani42/nvim-web-devicons',
         },
         config = function()
-            require('plugins.neotree')
+            require('plugins.nvimtree')
         end
     }
 

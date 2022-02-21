@@ -44,7 +44,7 @@ nvim_tree.setup {
     auto_reload_on_write = true,
     follow = true,
     disable_netrw = true,
-    hijack_netrw = true,
+    hijack_netrw = false,
     open_on_setup = true,
     ignore_ft_on_setup  = { ".git", "node_modules", ".cache" },
     auto_close = false,
