@@ -28,7 +28,7 @@ cokeline.setup({
             filetype = 'NvimTree',
             components = {
                 {
-                    text = '  NvimTree',
+                    text = '  Files',
                     hl = {
                         bg = '#0f0f0f',
                         style = 'bold'
