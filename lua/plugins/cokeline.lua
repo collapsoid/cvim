@@ -13,75 +13,58 @@ cokeline.setup({
         new_buffers_position = 'next'
     },
     default_hl = {
-        focused = {
-            fg = '#0f0f0f',
-            bg = '#ccc8ba',
-        },
-        unfocused = {
-            fg = '#202020',
-            bg = '#9d998d',
+        fg = function(buffer)
+            return buffer.is_focused and '#0f0f0f' or '#202020'
+        end ,
+        bg = function(buffer)
+            return buffer.is_focused and '#ccc8ba' or '#9d998d'
+        end
+    },
+    sidebar = {
+        filetype = 'NvimTree',
+        components = {
+            {
+                text = '  Files',
+                bg = '#0f0f0f',
+                fg = '#ccc8ba',
+                style = 'bold'
+            }
         }
     },
     rendering = {
-        max_buffer_width = 80,
-        left_sidebar = {
-            filetype = 'NvimTree',
-            components = {
-                {
-                    text = '  Files',
-                    hl = {
-                        bg = '#0f0f0f',
-                        style = 'bold'
-                    }
-                }
-            }
-        }
+        max_buffer_width = 80
     },
     components = {
         {
             text = function(buffer) return (buffer.index == 1) and '       ' or '  ' end,
-            hl = {
-                bg = '#202020'
-            }
+            bg = '#202020'
         },
         {
             text = function(buffer) return ' ' .. buffer.index end,
-            hl = {
-                fg = '#893f3e',
-            },
+            fg = '#893f3e'
         },
         {
             text = '|',
-            hl = {
-                fg = '#202020',
-            },
+            fg = '#202020'
         },
         {
             text = function(buffer) return buffer.devicon.icon .. ' ' end,
-            hl = {
-                fg = '#0f0f0f',
-            },
+            fg = '#0f0f0f'
         },
         {
             text = function(buffer) return buffer.filename end,
-            hl = {
-                style = function(buffer) return buffer.is_focused and 'bold' or nil end,
-            }
+            style = function(buffer) return buffer.is_focused and 'bold' or nil end
         },
         {
             text = function(buffer) return (buffer.is_modified) and '*' or '' end,
-            hl = {
-                fg = '#ba604c',
-                style = 'bold'
-            }
+            fg = '#ba604c',
+            style = 'bold'
         },
         {
             delete_buffer_on_left_click = true,
             text = '  ',
-            hl = {
-                fg = '#0f0f0f',
-                style = 'bold'
-            },
+            fg = '#0f0f0f',
+            style = 'bold'
         },
     },
 })
