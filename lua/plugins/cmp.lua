@@ -11,17 +11,15 @@ cmp.setup {
     confirmation = {
         default_behaviour = cmp.ConfirmBehavior.Insert
     },
-    completion = {
-        -- completeopt = 'menu,menuone,noinsert'
-    },
     preselect = "enable",
     snippet = {
         expand = function(args)
             require("luasnip").lsp_expand(args.body)
         end
     },
-    documentation = {
-        border = { '╭', '─', '╮', '│', '╯', '─', '╰', '│' }
+    window = {
+        completion = cmp.config.window.bordered(),
+        documentation = cmp.config.window.bordered()
     },
     formatting = {
         format = function(entry, vim_item)
