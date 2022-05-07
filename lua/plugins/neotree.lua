@@ -34,9 +34,9 @@ neotree.setup({
         },
     },
     filesystem = {
-        filters = {
-            show_hidden = false,
-            respect_gitignore = true,
+        filtered_items = {
+            hide_dotfiles = true,
+            hide_gitignored = true,
         },
         follow_current_file = true,
         use_libuv_file_watcher = true,
