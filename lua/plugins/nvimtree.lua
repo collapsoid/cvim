@@ -42,12 +42,10 @@ end
 
 nvim_tree.setup {
     auto_reload_on_write = true,
-    follow = true,
     disable_netrw = true,
     hijack_netrw = false,
     open_on_setup = true,
     ignore_ft_on_setup  = { ".git", "node_modules", ".cache" },
-    auto_close = false,
     open_on_tab = true,
     hijack_cursor = true,
     update_cwd = false,
@@ -56,10 +54,6 @@ nvim_tree.setup {
         update_cwd  = false,
         ignore_list = {}
     },
-    update_to_buf_dir = {
-        enable = true,
-        auto_open = true
-    },
     system_open = {
         cmd  = nil,
         args = {}
@@ -67,12 +61,16 @@ nvim_tree.setup {
     view = {
         width = 70,
         side = 'left',
-        auto_resize = false,
         mappings = {
             custom_only = false,
             list = {}
         },
         signcolumn = "yes"
+    },
+    actions = {
+        open_file = {
+            resize_window = false
+        }
     },
     diagnostics = {
         enable = true,
