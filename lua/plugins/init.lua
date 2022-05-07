@@ -21,7 +21,7 @@ return require('packer').startup(function(use)
 
     -- use {
     --     "nvim-neo-tree/neo-tree.nvim",
-    --     branch = "main",
+    --     branch = "master",
     --     requires = {
     --         "nvim-lua/plenary.nvim",
     --         "kyazdani42/nvim-web-devicons",
@@ -53,17 +53,17 @@ return require('packer').startup(function(use)
     }
 
     use {
-        'neovim/nvim-lspconfig',
-        config = function()
-            require('plugins.lsp.lspconfig')
-        end
-    }
-
-    use {
         'williamboman/nvim-lsp-installer',
-        config = function()
-            require('plugins.lsp.lspinstall')
-        end
+        {
+            'neovim/nvim-lspconfig',
+            config = function()
+                require('nvim-lsp-installer').setup({
+                    automatic_installation = true
+                })
+
+                require('plugins.lsp.lspconfig')
+            end
+        }
     }
 
     use {

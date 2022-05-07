@@ -4,7 +4,6 @@ if not ok then
     return
 end
 
-local lsp_servers = require("nvim-lsp-installer.servers")
 
 local handlers = require('plugins.lsp.handlers').handlers
 local capabilities = require('plugins.lsp.capabilities').capabilities
@@ -39,6 +38,8 @@ local on_attach = function(_, bufnr)
 end
 
 function M.setup()
+    local lspconfig = require('lspconfig')
+
     local opts = {
         on_attach = on_attach,
         handlers = handlers,
@@ -46,16 +47,7 @@ function M.setup()
     }
 
     for _, server_name in pairs(servers) do
-        local available, server = lsp_servers.get_server(server_name)
-
-        if available then
-            server:on_ready(function()
-                server:setup(opts)
-            end)
-            if not server:is_installed() then
-                server:install()
-            end
-        end
+        lspconfig[server_name].setup(opts)
     end
 end
 
