@@ -6,7 +6,21 @@ end
 
 
 treesitter.setup {
-    ensure_installed = 'maintained',
+    ensure_installed = {
+        'bash',
+        'cpp',
+        'css',
+        'html',
+        'javascript',
+        'json',
+        'json5',
+        'jsonc',
+        'lua',
+        'markdown',
+        'typescript',
+        'vue',
+        'yaml'
+    },
     highlight = {
         enable = true,
         additional_vim_regex_highlighting = true
