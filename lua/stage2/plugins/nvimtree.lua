@@ -12,25 +12,25 @@ g.nvim_tree_show_icons = {
 }
 
 g.nvim_tree_icons = {
-   default = "",
-   symlink = "",
+   default = '',
+   symlink = '',
    git = {
-      deleted = "",
-      ignored = "◌",
-      renamed = "➜",
-      staged = "S",
-      unmerged = "",
-      unstaged = "",
-      untracked = "U",
+      deleted = '',
+      ignored = '◌',
+      renamed = '➜',
+      staged = 'S',
+      unmerged = '',
+      unstaged = '',
+      untracked = 'U',
    },
    folder = {
-      arrow_open = "",
-      arrow_closed = "",
-      default = "",
-      empty = "",
-      empty_open = "",
-      open = "",
-      symlink = ""
+      arrow_open = '',
+      arrow_closed = '',
+      default = '',
+      empty = '',
+      empty_open = '',
+      open = '',
+      symlink = ''
    }
 }
 
@@ -45,7 +45,7 @@ nvim_tree.setup {
     disable_netrw = true,
     hijack_netrw = false,
     open_on_setup = true,
-    ignore_ft_on_setup  = { ".git", "node_modules", ".cache" },
+    ignore_ft_on_setup  = { '.git', 'node_modules', '.cache' },
     open_on_tab = true,
     hijack_cursor = true,
     update_cwd = false,
@@ -65,7 +65,7 @@ nvim_tree.setup {
             custom_only = false,
             list = {}
         },
-        signcolumn = "yes"
+        signcolumn = 'yes'
     },
     actions = {
         open_file = {
@@ -75,10 +75,10 @@ nvim_tree.setup {
     diagnostics = {
         enable = true,
         icons = {
-            hint = "",
-            info = "",
-            warning = "",
-            error = "",
+            hint = '',
+            info = '',
+            warning = '',
+            error = '',
         }
     },
     git = {

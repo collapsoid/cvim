@@ -9,9 +9,9 @@ local func = utils.func
 
 bufferline.setup {
   options = {
-    close_command = "Bdelete! %d",
-    right_mouse_command = "Bdelete! %d",
-    left_mouse_command = "buffer %d",
+    close_command = 'Bdelete! %d',
+    right_mouse_command = 'Bdelete! %d',
+    left_mouse_command = 'buffer %d',
     middle_mouse_command = nil,
     indicator_icon = '▎',
     buffer_close_icon = '',
@@ -26,12 +26,12 @@ bufferline.setup {
     diagnostics_update_in_insert = false,
     offsets = {
         {
-            filetype = "neo-tree",
+            filetype = 'neo-tree',
             text = function()
                 return func.getcwd()
             end,
-            highlight = "Directory",
-            text_align = "left",
+            highlight = 'Directory',
+            text_align = 'left',
             padding = 1
         }
     },

@@ -1,12 +1,12 @@
-local ok, lspinstall = pcall(require, "nvim-lsp-installer")
+local ok, lspinstall = pcall(require, 'nvim-lsp-installer')
 
 if not ok then
     return
 end
 
 
-local handlers = require('plugins.lsp.handlers').handlers
-local capabilities = require('plugins.lsp.capabilities').capabilities
+local handlers = require('stage2.plugins.lsp.handlers').handlers
+local capabilities = require('stage2.plugins.lsp.capabilities').capabilities
 
 local M = {}
 

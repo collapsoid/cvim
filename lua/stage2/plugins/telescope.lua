@@ -19,13 +19,13 @@ telescope.setup {
             '--column',
             '--smart-case'
         },
-        prompt_prefix = "> ",
-        selection_caret = "> ",
-        entry_prefix = "  ",
-        initial_mode = "insert",
-        selection_strategy = "reset",
-        sorting_strategy = "descending",
-        layout_strategy = "horizontal",
+        prompt_prefix = '> ',
+        selection_caret = '> ',
+        entry_prefix = '  ',
+        initial_mode = 'insert',
+        selection_strategy = 'reset',
+        sorting_strategy = 'descending',
+        layout_strategy = 'horizontal',
         layout_config = {
             horizontal = {
                 preview_width = 0.4,

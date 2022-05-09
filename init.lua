@@ -1,18 +1,12 @@
-local utils = require('utils')
-local cmd = utils.cmd
+local stage1 = require('stage1')
+local stage2 = require('stage2')
+local stage3 = require('stage3')
 
-require('core')
-require('plugins')
+-- Essential configuration
+stage1.init()
 
+-- Plugins
+stage2.init()
 
-cmd [[ colorscheme samurai ]]
-
--- Highlight yank
-cmd [[
-    highlight YankColor ctermfg=59 ctermbg=41 guifg=#ccc8ba guibg=#ba604c
-
-    augroup highlight_yank
-        autocmd!
-        au TextYankPost * silent! lua vim.highlight.on_yank{higroup="YankColor", hicolor="red", timeout=300}
-    augroup END
-]]
+-- Finalization
+stage3.init()

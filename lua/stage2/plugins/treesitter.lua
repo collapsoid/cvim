@@ -38,9 +38,9 @@ treesitter.setup {
     },
     context_commentstring = {
         enable = true,
-        config = { css = "// %s" },
+        config = { css = '// %s' },
     },
-    indent = { enable = true, disable = { "yaml" } },
+    indent = { enable = true, disable = { 'yaml' } },
     textobjects = {
         swap = {
             enable = false
@@ -51,6 +51,6 @@ treesitter.setup {
     },
     textsubjects = {
         enable = false,
-        keymaps = { ["."] = "textsubjects-smart", [";"] = "textsubjects-big" }
+        keymaps = { ['.'] = 'textsubjects-smart', [';'] = 'textsubjects-big' }
     }
 }

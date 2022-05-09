@@ -1,4 +1,4 @@
-local ok, toggleterm = pcall(require, "toggleterm")
+local ok, toggleterm = pcall(require, 'toggleterm')
 
 if not ok then
     return

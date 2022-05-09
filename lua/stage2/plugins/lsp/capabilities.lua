@@ -2,7 +2,7 @@ local M = {}
 
 M.capabilities = vim.lsp.protocol.make_client_capabilities()
 
-M.capabilities.textDocument.completion.completionItem.documentationFormat = { "markdown", "plaintext" }
+M.capabilities.textDocument.completion.completionItem.documentationFormat = { 'markdown", "plaintext' }
 M.capabilities.textDocument.completion.completionItem.preselectSupport = true
 M.capabilities.textDocument.completion.completionItem.commitCharactersSupport = true
 M.capabilities.textDocument.completion.completionItem.tagSupport = { valueSet = { 1 } }
@@ -19,7 +19,7 @@ M.capabilities.textDocument.completion.completionItem.resolveSupport = {
 }
 
 
-local ok, cmp_lsp = pcall(require, "cmp_nvim_lsp")
+local ok, cmp_lsp = pcall(require, 'cmp_nvim_lsp')
 
 if ok then
     M.capabilities = cmp_lsp.update_capabilities(M.capabilities)
