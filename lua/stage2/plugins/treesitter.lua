@@ -18,6 +18,7 @@ treesitter.setup {
         'lua',
         'markdown',
         'typescript',
+        'tsx',
         'vue',
         'yaml'
     },
