@@ -2,38 +2,6 @@ local utils = require('utils')
 local set_map_key = utils.set_map_key
 local g = utils.g
 
-g.nvim_tree_git_hl = 1
-
-g.nvim_tree_show_icons = {
-   folders = 1,
-   folder_arrows= 1,
-   files = 1,
-   git = 1
-}
-
-g.nvim_tree_icons = {
-   default = '',
-   symlink = '',
-   git = {
-      deleted = '',
-      ignored = '◌',
-      renamed = '➜',
-      staged = 'S',
-      unmerged = '',
-      unstaged = '',
-      untracked = 'U',
-   },
-   folder = {
-      arrow_open = '',
-      arrow_closed = '',
-      default = '',
-      empty = '',
-      empty_open = '',
-      open = '',
-      symlink = ''
-   }
-}
-
 local ok, nvim_tree = pcall(require, 'nvim-tree')
 
 if not ok then
@@ -67,6 +35,57 @@ nvim_tree.setup {
         },
         signcolumn = 'yes'
     },
+    renderer = {
+        add_trailing = false,
+        group_empty = false,
+        highlight_git = true,
+        highlight_opened_files = "none",
+        root_folder_modifier = ":~",
+        indent_markers = {
+            enable = false,
+            icons = {
+                corner = "└ ",
+                edge = "│ ",
+                none = "  ",
+            },
+        },
+        icons = {
+            webdev_colors = true,
+            git_placement = "before",
+            padding = " ",
+            symlink_arrow = " ➛ ",
+            show = {
+                file = true,
+                folder = true,
+                folder_arrow = true,
+                git = true,
+            },
+            glyphs = {
+                default = "",
+                symlink = "",
+                folder = {
+                    arrow_closed = "",
+                    arrow_open = "",
+                    default = "",
+                    open = "",
+                    empty = "",
+                    empty_open = "",
+                    symlink = "",
+                    symlink_open = "",
+                },
+                git = {
+                    deleted = '',
+                    ignored = '◌',
+                    renamed = '➜',
+                    staged = 'S',
+                    unmerged = '',
+                    unstaged = '',
+                    untracked = 'U',
+                },
+            },
+        },
+        special_files = { "Cargo.toml", "Makefile", "README.md", "readme.md" },
+    },
     actions = {
         open_file = {
             resize_window = false
@@ -84,7 +103,7 @@ nvim_tree.setup {
     git = {
         enable = true,
         ignore = true
-    }
+    },
 }
 
 local opts = { noremap = true, silent = true }
