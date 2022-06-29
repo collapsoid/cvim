@@ -13,7 +13,17 @@ toggleterm.setup {
     open_mapping = [[<leader>t]],
     hide_numbers = true,
     direction = 'horizontal',
-    close_on_exit = true
+    close_on_exit = true,
+    start_in_insert = true,
+    on_open = function(terminal)
+        local nvimtree = require "nvim-tree"
+        local nvimtree_view = require "nvim-tree.view"
+
+        if nvimtree_view.is_visible() and terminal.direction == "horizontal" then
+            nvimtree.toggle()
+            nvimtree.toggle(false, true)
+        end
+    end
 }
 
 
