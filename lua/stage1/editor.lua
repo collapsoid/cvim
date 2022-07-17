@@ -34,6 +34,9 @@ function M.set_options()
         filetype plugin on
         set nocompatible
         set t_Co=256
+
+        autocmd BufEnter term://* startinsert
+        autocmd BufLeave term://* stopinsert
     ]]
 end
 
