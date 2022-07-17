@@ -23,6 +23,8 @@ toggleterm.setup {
             nvimtree.toggle()
             nvimtree.toggle(false, true)
         end
+
+        utils.cmd('startinsert')
     end
 }
 
